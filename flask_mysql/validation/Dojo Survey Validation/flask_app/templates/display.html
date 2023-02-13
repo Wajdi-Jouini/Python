@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <title>Display</title>
+</head>
+<body>
+    <div class="result">
+        <h1>Submited Info</h1>
+        <h4>Name : {{session['username']}}</h4>
+        <h4>Dojo Location : {{session.location}}</h4>
+        <h4>Favorite Language : {{session.Language}}</h4>
+        <h4>Comment : {{session.comment}}</h4>
+        <a href="/clear"> Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <div class= "container">
+        <div class="navbar">
+            <H1>Edit User {{user.id}}</H1>
+            <a href="/display">Home</a>
+        </div>
+        <form class="Form" action="/display/update" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">First Name:</label>
+                <input value="{{user.first_name}}" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Last Name:</label>
+                <input value="{{user.last_name}}" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Email:</label>
+                <input value="{{user.email}}" type="email" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="show">
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a href="/display/{{user.id}}">Show User</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

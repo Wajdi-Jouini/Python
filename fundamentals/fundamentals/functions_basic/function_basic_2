@@ -1,0 +1,13 @@
+# -------1------------Countdown----------------------------------------------------------------
+def countdown(i):
+    for i in range(i,-1,-1):
+        print(i)
+        a=[]
+        a.append(i)
+countdown(5)
+print(a)
+#--------2------------Print and Return----------------------------------------------------------------
+def print_and_return(x,y):
+    print(x)
+    return y
+print_and_return(5,4)

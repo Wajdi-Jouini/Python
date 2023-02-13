@@ -1,0 +1,38 @@
+-- Create 3 new dojos
+ INSERT INTO dojos (name) VALUES ('dijos1'), ('dijos2'), ('dijos3');
+ 
+ -- READ
+ -- MYSQL command = SELECT
+ SELECT * From dojos;
+
+ -- Delete the 3 dojos you just created
+   -- delete
+  delete from dojos WHERE id = 1;
+  delete from dojos WHERE id = 2;
+  delete from dojos WHERE id = 3;
+ 
+ 
+ -- Create 3 new dojos
+ INSERT INTO dojos (name) VALUES ('dijos1'), ('dijos2'), ('dijos3');
+
+-- INSERT 3 ninjas that belong to the first dojo
+ INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja1', 'dojo1', '24','4'), ('ninja2', 'dojo1', '25','4'), ('ninja3', 'dojo1', 18, 4);
+ 
+ -- INSERT 3 ninjas that belong to the second dojo
+ INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja4', 'dojo2', '24','5'), ('ninja5', 'dojo2', '25','5'), ('ninja6', 'dojo2', 18,5);
+ 
+  -- INSERT 3 ninjas that belong to the third dojo
+ INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja7', 'dojo3', '24','6'), ('ninja8', 'dojo3', '25','6'), ('ninja9', 'dojo3', '18', 6);
+
+  SELECT * From dojos Join ninjas ON dojos.id = ninjas.dojo_id WHERE dojo_id = 4;
+
+  
+  SELECT * From dojos Join ninjas ON dojos.id = ninjas.dojo_id WHERE dojo_id = 6;
+
+  SELECT dojo_id From ninjas ORDER BY id DESC LIMIT 1;
+
+  -- READ
+ -- MYSQL command = SELECT
+ SELECT * From ninjas;
+ 
+ SELECT * From dojos;
